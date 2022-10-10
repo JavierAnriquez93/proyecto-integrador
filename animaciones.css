@@ -1,0 +1,12 @@
+.navbar__a:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 0.5s ease;
+}
+
+.fa-solid:hover {
+    color: white;
+    background-color: black;
+    transition: all 0.5s ease;
+}
+ 
