@@ -16,87 +16,136 @@
 
 <body>
     <header class="header">
-        <div class="header__div1">
-            <img src="./img/icon.png" alt="ZP Logo">
-            <p>ENERGY <span>ROAD</span></p>
-        </div>
+        <a href="./index.html">
+            <div class="header__div1">
+                <img src="./img/icon.png" alt="ZP Logo">
+                <p>ENERGY <span>ROAD</span></p>
+            </div>
+        </a>
+
         <nav class="navbar">
 
+            <label for="menu__toggle" class="menu__label">
+                <img src="./img/menú-hamburguesa.png" alt="icono menu" class="menu__icon">
+            </label>
+            <input type="checkbox" id="menu__toggle">
             <ul class="navbar__list">
                 <li>
                     <a class="navbar__a" href="#inicio">INICIO</a>
                 </li>
                 <li>
-                    <a class="navbar__a" href="#destacados">DESTACADOS</a>
+                    <a class="navbar__a" href="#q-b">¿QUE BUSCAS?</a>
                 </li>
                 <li>
-                    <a class="navbar__a" href="#¿quebuscas?">¿QUE BUSCAS?</a>
+                    <a class="navbar__a" href="#destacados">DESTACADOS</a>
                 </li>
                 <li>
                     <a class="navbar__a" href="#beneficios">BENEFICIOS</a>
                 </li>
                 <li>
-                    <a class="navbar__a" href="#">CONSULTAS</a>
+                    <a class="navbar__a" href="#contacto">CONTACTO</a>
                 </li>
             </ul>
-
             <ul class="navbar__icons">
                 <li>
-                    <a href="#"><i class="fa-solid fa-user"></i></a>
+                    <a href="./login.html"><i class="fa-solid fa-user"></i></a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa-solid fa-location-dot"></i></a>
+                    <label for="location" class="location__label">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </label>
+                    <input type="checkbox" id="location">
+                    <div class="div__location">
+                        <h3>NUESTRA UBIACIÓN</h3>
+                        <img src="./img/map.jfif" alt="mapa">
+                        <a href="https://www.google.com/maps/place/La+Plata,+Provincia+de+Buenos+Aires/@-34.9204529,-57.9881898,13z/data=!3m1!4b1!4m5!3m4!1s0x95a2e62b1f0085a1:0xbcfc44f0547312e3!8m2!3d-34.9204948!4d-57.9535657?hl=es"
+                            target="_blank">
+                            Ver en Maps
+                        </a>
+                    </div>
                 </li>
+                <div class="location"></div>
             </ul>
+            
+
         </nav>
     </header>
     <main>
         <section id="inicio">
-            <img src="./img/portada-1.jpg" alt="Portada">
             <p class="inicio__div1">
                 ...A DONDE VAS, <span>ESTA BIEN.</span>
             </p>
+        </section>
+
+        <section id="q-b">
+            <h2>
+                ¿QUE BUSCAS?
+            </h2>
+            <div class="q-b__palets">
+                <div class="q-b__palet">
+                    <img src="./img/qb-cascos1.jpg" alt="cascos">
+                    <h4>CASCOS</h4>
+                </div>
+                <div class="q-b__palet">
+                    <img src="./img/qb-motos1.jpg" alt="motos">
+                    <h4>MOTOS</h4>
+                </div>
+                <div class="q-b__palet">
+                    <img src="./img/qb-accesorios1.jpg" alt="accesorios">
+                    <h4>ACCESORIOS</h4>
+                </div>
+            </div>
         </section>
 
         <section id="destacados">
             <h2>NUESTROS VEHICULOS DESTACADOS</h2>
             <div class="destacados__cards">
                 <div class="destacados__card">
-                    <img src="./img/destacados-1.jpg" alt="Destacada 1">
-                    <div class="destacados__card__info">
-                        <h3>ESTEPA</h3>
-                        <p>Potencia de 45 HP, con freno de disco trasero,
-                            manubrio adaptable y luz de neon
-                        </p>
-                    </div>
-                    <button class="destacados__card__btn">COMPRAR</button>
-                </div>
-                <div class="destacados__card">
                     <img src="./img/destacados-2.jpg" alt="Destacada 2">
                     <div class="destacados__card__info">
                         <h3>PANTER</h3>
                         <p>
-                            Clasico estilo italiano con 23 HP de potencia,
+                            Clasico estilo italiano con 22 kW de potencia,
                             baul trasero y luz cree LED.
                         </p>
+                        <div class="destacados__card__price">
+                            <p><span>USD</span> 3850</p>
+                            <button class="destacados__card__btn">COMPRAR</button>
+                        </div>
                     </div>
-                    <button class="destacados__card__btn">COMPRAR</button>
+                </div>
+                <div class="destacados__card">
+                    <img src="./img/destacados-1.jpg" alt="Destacada 1">
+                    <div class="destacados__card__info">
+                        <h3>ESTEPA</h3>
+                        <p>De ruta, con potencia de 38 kW, freno de disco,
+                            manubrio adaptable y luz de neon
+                        </p>
+                        <div class="destacados__card__price">
+                            <p><span>USD</span> 5530</p>
+                            <button class="destacados__card__btn">COMPRAR</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="destacados__card">
                     <img src="./img/destacados-3.jpg" alt="Destacado-3">
                     <div class="destacados__card__info">
                         <h3>ER-40</h3>
                         <p>
-                            Diseño que cuenta con pedales que convierten la
-                            energía cinética en energía eléctrica 
+                            Cuenta con pedales funcionales que convierten
+                            la energía cinética en energía eléctrica
                         </p>
+                        <div class="destacados__card__price">
+                            <p><span>USD</span> 2200</p>
+                            <button class="destacados__card__btn">COMPRAR</button>
+                        </div>
                     </div>
-                    <button class="destacados__card__btn">COMPRAR</button>
                 </div>
             </div>
         </section>
 
         <section id="beneficios">
+            <h2>BENEFICIOS</h2>
             <div class="beneficios__div1">
                 <p>Contamos con un amplio stock de vehículos ideales para conducir
                     en ciudad o en ruta, con una posición y comodidad de manejo única.
@@ -106,30 +155,51 @@
                     la intención de que cada viaje sea confortable, en una moto de bajo consumo,
                     con reduccion de piezas y partes moviles, y diseño con un sistema anti-vibracion
                 </p>
-                <ul class="lista-beneficios">
+                <ul class="beneficios__lista">
                     <li>
+                        <img src="./img/tilde.png" alt="tilde1">
                         Ya que no consume combustible, no afecta a la capa de ozono.
                     </li>
                     <li>
+                        <img src="./img/tilde.png" alt="tilde2">
+
                         Su mecánica genera una moticidad fluida, silenciosa y constante.
                     </li>
                     <li>
-                        No es necesario realizarle service con frecuencia.
+                        <img src="./img/tilde.png" alt="tilde3">
+                        Cuenta con baterías recargables mediante coneccion eléctrica o paneles solares (no incluido).
                     </li>
                     <li>
-                        Cuenta con baterías recargables mediante coneccion eléctrica o paneles solares (no incluido).
+                        <img src="./img/tilde.png" alt="tilde4">
+                        No es necesario realizarle service con frecuencia.
                     </li>
                 </ul>
             </div>
-
-
         </section>
 
 
 
     </main>
     <footer>
-
+        <section id="contacto">        
+            <div class="footer__info">
+                <p><i class="fa-brands fa-whatsapp"></i> + 54 11578923</p>
+                <p>Diagonal Norte - La Plata</p>
+                <p>Todos los derechos reservados</p>
+            </div>
+            <div class="footer__name">
+                <h3>ENERGY ROAD</h3>
+            </div>
+            <div class="footer__redes">
+                <h4>Gracias por elegirnos </h4>
+                <p>Seguinos en redes!</p>
+                <div class="footer__redes__icons">
+                    <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://twitter.com/?lang=es" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+                </div>
+            </div>
+        </section>
     </footer>
 </body>
 

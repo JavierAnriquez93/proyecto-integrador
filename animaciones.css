@@ -1,12 +1,100 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to  {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-up {
+    0% {
+      transform: translateY(100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slide-right {
+    from {
+      transform: translateX(100px);
+    }
+    to {
+      transform: translateX(0);
+    }
+}
+
+.location {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: none;
+}
+
+.header__div1:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+
+}
+
 .navbar__a:hover {
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
-    transition: all 0.5s ease;
-}
+    font-weight: 700;
+    font-size: 20px;
+    padding: 12px 40px;
+    transition: all 0.3s ease;
+} 
 
 .fa-solid:hover {
     color: white;
     background-color: black;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
 }
- 
+
+
+
+.inicio__div1 {
+    animation: fade 0,6s ease-in ,  slide-rigth 0.8s ease-in;
+}
+
+.q-b__palets {
+    animation: fade 0.8s ease-in forwards, slide-up 0.9s ease-in-out;
+}
+
+.q-b__palet:hover,
+.q-b__palet:hover img {
+    scale: 1.1;
+    transition: all 0.2s ease;
+
+}
+
+#destacados {
+
+}
+
+.destacados__card img:hover {
+    transform: scale(0.98);
+    transition: all 0.2s ease;
+
+}
+
+.destacados__card__btn:hover {
+    border: 1px solid white;
+    background: rgb(114, 11, 11) ;
+    color: rgb(227, 154, 154);
+    transition: all 0.2s ease-in-out;
+}

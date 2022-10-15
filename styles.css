@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&family=Montserrat:ital,wght@0,400;0,700;0,900;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Michroma&family=Montserrat:ital,wght@0,400;0,700;0,900;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Michroma&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap');
+
 
 :root {
     --background-navbar: rgb(246, 243, 244);
-
-    /* --background-navbar: rgb(200, 182, 169); */
-
 }
 
 *{
@@ -14,28 +13,39 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    /* list-style-type: none; */
+    list-style-type: none;
+    transition-timing-function: ease;
 }
 
 header {
-    /* background-color: rgb(203, 123, 58) ; */
-    background: linear-gradient( var(--background-navbar) , rgba(235, 224, 224, 0) );
+    background-color: rgb(255, 243, 232) ;
+    box-shadow: 2px 2px 10px;
     width: 100%;
     height: 70px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* gap: 50px; */
     padding: 0px 60px 0px 115px;
     position: fixed;
     top: 0;
     z-index: 1;
 }
 
+header a {
+    color: black;
+}
+/* animacion */
+
+header:hover {
+    background: linear-gradient( var(--background-navbar), var(--background-navbar),var(--background-navbar),var(--background-navbar), var(--background-navbar),var(--background-navbar), rgba(235, 224, 224, 0));
+    transition: all 0.3s ease-in;
+}
+
 .header__div1 {
     display: flex;
     gap: 4px;
     align-items: center;
+    cursor: pointer;
 }
 
 .header__div1 p,
@@ -60,27 +70,24 @@ header img {
 }
 
 .navbar {
-    /* max-width: 1050px; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.navbar__list {
-    gap: 15px;
-}
 
-.navbar__list li a {
-    /* color: rgb(red, green, blue); */
-    /* color: rgb(255, 255, 255); */
+
+.navbar__a {
+
     color: rgb(123, 18, 18);
-    padding: 8px 15px;
+    padding: 8px 10px;
     border-radius: 6px;
 }
 
 .navbar__icons {
     list-style-type: none;
     width: 60px;
+    padding: 0 0 0 80px;
     display: flex;
     justify-content: space-between;
 }
@@ -97,11 +104,66 @@ header img {
     border-radius: 25px;
 }
 
-main {
-    /* justify-content: center; */
-    background: rgb(123, 18, 18);
+
+/* CHECKBOX */
+
+#menu__toggle,
+#location,
+.menu__label {
+    display: none;
+}
+
+.div__location {
+    position: absolute;
+    top: 70px;
+    right: 0;
     /* width: 100%; */
-    /* max-width: 1270px; */
+    width: 70%;
+    padding: 80px;
+    background: rgba(5, 7, 12, 0.8);
+    /* border-left: 2px solid white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+    display: none;
+    z-index: 2;
+}
+
+.div__location::-webkit-scrollbar {
+    display: none;
+}
+
+.div__location h3 {
+    text-align: center;
+    color: white;
+
+}
+
+.div__location img {
+    width: 600px ;
+}
+.div__location a {
+    color: white;
+    background: rgb(141, 130, 130);
+    padding: 10px 20px ;
+    border-radius: 15px;
+}
+
+#location:checked + .div__location{
+    display: flex;
+    transition: all 0.3s ease-in;
+}
+
+
+
+
+
+main {
+    background: linear-gradient(to left, black, rgb(123, 18, 18) );
 }
 
 #inicio img {
@@ -109,11 +171,24 @@ main {
 }
 
 #inicio {
-    display: flex;
-    justify-content: center;
+    min-height: 100vh;
+    background: url(./img/portada-1.jpg) center;
+    background-size: cover;
 }
 
 .inicio__div1 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+    text-shadow: 2px 3px 2px rgb(0, 0, 0);
+    bottom: 250px;
+    right: 100px;
+}
+
+.inicio__div1:nth-child(3){
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -123,116 +198,227 @@ main {
     text-shadow: 2px 3px 2px rgb(0, 0, 0);
     bottom: 250px;
     right: 100px;
-    /* z-index: 2; */
 }
 
+#q-b {
+    padding: 70px 60px 170px;
+    background: rgba(255, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+}
 
+#q-b h2 {
+    padding: 0 0 0 200px;
+    color: white;
+    font-size: 30px;
+    text-shadow: 1px 1px 3px black;
+}
+
+.q-b__palets {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+ .q-b__palet {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 240px;
+    padding: 20px;
+    border-radius: 150px;
+    gap: 40px;
+    cursor: pointer;
+ }
+
+.q-b__palet img {
+    width: 200px;
+    border-radius: 100px;
+}
 
 #destacados {
-    /* width: 100%; */
-    /* background: rgb(123, 18, 18); */
     background: rgb(255, 255, 255);
-    /* top: 120px; */
-    padding: 100px 0;
-    /* margin: 0 100px; */
-    /* max-width: 1150px; */
-    /* display: flex;  */
-    /* flex-direction: column;  */
-    /* justify-content: center; */
+    padding: 70px 0;
+
 }
 
 #destacados h2 {
-    padding: 0 0 0 200px;
+    padding: 0 0 0 100px;
+    font-size: 30px;
 }
 
 .destacados__cards {
     margin: 50px auto;
-    gap: 5px;
+    gap: 10px;
     display: flex;
-    /* justify-content: center; */
-
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .destacados__card {
-    /* background: var(--background-navbar); */
-    background: linear-gradient(black, rgb(123, 18, 18)); 
-    /* color: white; */
+
+    background: linear-gradient(black, black, rgb(123, 18, 18)); 
     width: 340px;
-    height: 440px;
-    /* justify-content: center; */
-    /* border-radius: 5px; */
 }
 
 .destacados__card img {
-    margin: 5px;
-    width: 330px;
+    margin: 3px;
+    width: 334px;
     height: 280px;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 .destacados__card__info {
-    padding: 0px 20px;
-    /* gap: 50px; */
+    padding: 0px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
 }
 
 .destacados__card__info h3{
-    color: rgb(169, 184, 184);
-    font-family:  'Audiowide', cursive ;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px black;
 }
 
 .destacados__card__info p {
-    color: white;
-    /* position: relative; */
-    margin: 5px 10px;
+    color: rgb(196, 196, 196);
+    font-weight: 500;
+    font-size: 10;
+    padding: 0 5px;
+}
+
+.destacados__card__price {
+    margin: 12px 0 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.destacados__card__price p {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px black;
+}
+
+.destacados__card__price p span {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(121, 121, 121);
 }
 
 .destacados__card__btn {
-    /* background: linear-gradient(to left, black , rgba(244, 111, 1, 0.79)) ; */
-    /* background: rgba(144, 67, 4, 0.79); */
-    color: white;
-    /* font-size: 15px; */
-    background-color: black;
-    border: 1px solid gray;
-    /* color: rgb(123 , 18, 18); */
+    background: rgb(255, 255, 255);
+
+    color: rgb(123, 18, 18);
+    border: 1px solid rgb(198, 110, 110);
     font-weight: 700;
     padding: 10px 20px;
     border-radius: 30px;
-    margin: 5px 200px;
+    width: 130px;
     text-align: center;
-    
+    align-self: flex-end;
+    cursor: pointer;
 }
 
 #beneficios {
-    background-color: rgba(144, 67, 4, 0.79);
-    /* display: flex; */
-    /* width: 95%; */
-    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 60px 0;
+    padding: 50px;
+    gap: 100px;
+    background: rgba(251, 251, 251, 0.1);
+}
+
+#beneficios h2 {
+    font-size: 30px;
+    text-shadow: 1px 1px 10px white;
+
 }
 
 .beneficios__div1 {
-    color: white;
-    /* width: 80%; */
-    /* margin: 50px auto; */
-    padding: 50px 100px;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    /* align-items: center; */
-    gap: 60px;
+    align-items: center;
+    gap: 80px;
+    color: white;
 }
 
 .beneficios__div1 p{
-    max-width: 50%;
-    text-align: center;
-    font-size: medium;
-    font-weight: 700;
+    max-width: 850px;
+    font-size: 17px;
+    text-shadow: 1px 1px 1px black;
+    font-weight: 600;
+    font-family: 'Michroma', sans-serif;
+
 }
 
-.section-2__div-1 p span {
+.beneficios__div1 p span {
     font-family: 'Audiowide', cursive;
 }
 
-.lista-beneficios {
-    gap: 90px;
+.beneficios__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: 600;
 }
 
+.beneficios__lista li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.beneficios__lista li img {
+    height: 14px;
+}
+
+
+#contacto {
+    background-color: rgb(0, 0, 0);
+    padding: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    color: white;
+}
+
+.footer__name h3{
+    color: rgb(74, 64, 64);
+    font-family: 'Audiowide', cursive;
+
+
+}
+
+.footer__redes {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer__redes__icons a {
+    margin-top: 20px;
+    color: rgb(123, 18, 18);
+}

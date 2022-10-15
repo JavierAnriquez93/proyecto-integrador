@@ -1,0 +1,105 @@
+@media (max-width: 992px){
+
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: space-between;
+    } 
+
+
+    .navbar__list {
+        position: absolute;
+        top: 70px;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        height: 250px;
+        flex-direction: column;
+        gap: 20px;
+        background-color: rgb(123, 18, 18);
+        border: 3px solid black;
+        border-top: 0;
+        border-radius: 0 0 15px 15px;
+        padding: 45px 30px;
+        align-items: flex-start;
+        gap: 25px;
+        z-index: 2;
+        display: none;
+        
+
+    
+    }
+
+    .navbar__a {
+        color: white;
+        padding: 0%;
+    }
+
+    .navbar__a:hover {
+        padding: 0 10px;
+
+    }
+
+    .menu__label {
+        display: flex;
+        order: 2;
+        cursor: pointer;
+    }
+
+    .menu__label img {
+        width: 25px;
+        height: 25px;
+    }
+
+    #menu__toggle:checked + .navbar__list{
+        display: flex;
+    }
+
+    #menu__toggle:checked + header {
+        background: white;
+        transition: all 0.3s ease;
+    }
+
+    .inicio__div1 {
+        position: absolute;
+    }
+
+    #q-b h2{
+        padding: 0;
+        text-align: center;
+    }
+
+    .q-b__palets {
+        flex-wrap: wrap;
+    }
+
+    #destacados h2 {
+        padding: 0 0 0 50px;
+
+    }
+
+    #beneficios {
+        text-align: center;
+        margin: 5px 50px 0;
+    }
+}
+
+@media (max-width: 576px) {
+
+    header {
+        padding: 0 40px 0 50px;
+    }
+    .navbar__icons {
+        width: 40px;
+        padding: 0 0 0 30px;
+    }
+
+
+
+    #beneficios {
+        margin: 5px 20px 0;
+    }
+
+}
