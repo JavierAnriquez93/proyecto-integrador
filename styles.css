@@ -87,12 +87,13 @@ header img {
 .navbar__icons {
     list-style-type: none;
     width: 60px;
-    padding: 0 0 0 80px;
+    padding: 0 20px 0 80px;
     display: flex;
     justify-content: space-between;
 }
 
-.fa-user {
+.fa-user,
+.fa-solid {
     color: rgb(123, 18, 18);
     padding: 10px 11px;
     border-radius: 30px;
@@ -333,7 +334,7 @@ main {
     justify-content: center;
     align-items: center;
     margin: 5px 60px 0;
-    padding: 50px;
+    padding: 80px 50px 80px;
     gap: 100px;
     background: rgba(251, 251, 251, 0.1);
 }
@@ -384,8 +385,68 @@ main {
     height: 14px;
 }
 
+.form {
+    padding: 0px 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 
-#contacto {
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+ .contact__form button {
+    background: linear-gradient(to left, black, rgb(123, 18, 18));
+    color: white;
+    font-weight: 700;
+    padding: 10px 20px;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.form__input {
+    width: 250px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.form__input--consult {
+    padding: 10px 20px;
+    border-radius: 5px;
+    max-width: 248px;
+    height: 180px;
+    resize: none;
+}
+
+
+.contact__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 60px 0;
+    padding: 50px;
+    gap: 25px;
+    height: 100vh;
+    /* background: rgba(251, 251, 251, 0.1); */
+    color: white;
+}
+
+/* .contact__form h2 {
+    color: white;
+} */
+
+#footer,
+#contact {
     background-color: rgb(0, 0, 0);
     padding: 60px;
     display: flex;
